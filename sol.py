@@ -28,7 +28,7 @@ class Game:
       self.player = "R"
 
   def get_square(self, x, y):
-    """returns current stone value.
+    """returns value of position on the board.
     Helps avoid thinking about the game datastructure"""
     return self.grid[y][x]
 
@@ -48,7 +48,7 @@ class Game:
 
   def get_territory(self, x, y):
     """returns the number of contiguous squares with the
-    red color.
+    red color. Algorithm is breadth first search.
     This method is NOT reentrant."""
     global COUNT
     visited.add((x, y))
